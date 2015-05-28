@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//code.jquery.com/jquery.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+  <input type="button" onclick="Change()" class="btn btn-lg-btn-success" id="Change" value="Change" />
+  
+  <input type="button" onclick="Random()" class="btn btn-lg-btn-success" id="Change" value="Random" />
+  
+<input type="button" onclick="Pick()" class="btn btn-lg-btn-success" id="Change" value="Pick a Color" />
+  
+  <input type="button" onclick="Cyan" class="btn btn-lg-btn-success" id="Change" value="Cyan" />
+  <input type="button" onclick="Alice()" class="btn btn-lg-btn-success" id="Change" value="Alice Blue" />
+  <input type="button" onclick="Magenta()" class="btn btn-lg-btn-success" id="Change" value="Dark Magenta" />
+  <input type="button" onclick="Gold()" class="btn btn-lg-btn-success" id="Change" value="Gold" />
+  <input type="button" onclick="Azure()" class="btn btn-lg-btn-success" id="Change" value="Azure" />
+  <input type="button" onclick="Green()" class="btn btn-lg-btn-success" id="Change" value="Green" />
+  <input type="button" onclick="Moccasin()" class="btn btn-lg-btn-success" id="Change" value="Mocassin" />
+
+</body>
+<script>
+  var colors = ["cyan", "aliceblue", "darkmagenta", "gold", "azure", "green", "moccasin"];
+  var x = 0;
+  
+  function Change(){
+    if(x == colors.length) {
+    x = 0;
+    }
+  
+  document.body.style.backgroundColor = colors[x];
+  console.log(colors[x]);
+  
+  x++;
+  }
+  
+  function Random(){
+    function ranNum(start, end){
+    var z= end - start;
+    var y = start;
+    return Math.floor((Math.random() * z + y)); 
+  
+    }
+   
+   x = ranNum(0,colors.length);
+
+  document.body.style.backgroundColor = colors[x];
+  console.log(colors[x]);  
+  }
+  
+  function Pick(){
+   var q = prompt("Pick a Color");
+    document.body.style.backgroundColor = q;
+  console.log(q);  
+  
+  if(q != colors){
+    alert("Sorry That Doesn't Exist");
+  }
+  }
+  function Cyan(){
+    document.body.style.backgroundColor = colors[0];
+  console.log(colors[0]); 
+  }
+  function Alice(){
+    document.body.style.backgroundColor = colors[1];
+  console.log(colors[1]); 
+  }
+  function Magenta(){
+    document.body.style.backgroundColor = colors[2];
+  console.log(colors[2]); 
+  }
+  function Gold(){
+    document.body.style.backgroundColor = colors[3];
+  console.log(colors[3]); 
+  }
+  function Azure(){
+    document.body.style.backgroundColor = colors[4];
+  console.log(colors[4]); 
+  }
+  function Green(){
+    document.body.style.backgroundColor = colors[5];
+  console.log(colors[5]); 
+  }
+  function Moccasin(){
+    document.body.style.backgroundColor = colors[6];
+  console.log(colors[6]); 
+  }
+  
+  
+</script>
+</html>
